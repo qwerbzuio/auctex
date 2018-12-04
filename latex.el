@@ -3383,7 +3383,7 @@ outer indentation in case of a commented line.  The symbols
 				 "\\)"))
 	     ;; Items.
 	     (+ (LaTeX-indent-calculate-last force-type) LaTeX-item-indent))
-	    ((looking-at "}")
+	    ((or (looking-at "}") (looking-at "]"))
 	     ;; End brace in the start of the line.
 	     (- (LaTeX-indent-calculate-last force-type)
 		TeX-brace-indent-level))
